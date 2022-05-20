@@ -1,13 +1,3 @@
-terraform {
-	backend "s3" {
-		bucket = "my-tf-hqxz-state"
-		key = "stage/webserver-cluster/terraform.tfstate"
-		region = "us-east-2"
-		dynamodb_table	= "my-tf-hqxz-locks"
-		encrypt	= true
-	}
-}
-
 locals {
 	http_port		= 80
 	any_port		= 0
